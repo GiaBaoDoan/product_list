@@ -1,0 +1,37 @@
+@media only screen and (max-width : 1024px) {
+    .cart {
+        &-main {
+            display: block;
+        }
+        &-section:nth-of-type(2) {
+             margin-top: 30px;
+        }
+    }
+}
+
+@media only screen and (max-width : 700px) {
+    .cart {
+        &-categories {
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
+@media only screen and (max-width : 500px) {
+    .cart {
+        &-categories {
+            grid-template-columns: repeat(1,1fr);
+        }
+        &-image {
+            .desktop-img {
+                display: none;
+            }
+            .mobile-img {
+                display: block;
+            }
+        }
+        &-checkout {
+            max-width: 100%;
+            height: 600px;
+        }
+    }
+}

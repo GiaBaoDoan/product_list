@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <!-- link font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link css -->
+    <link rel="stylesheet" href="./css/app.css" />
+    <title>Frontend Mentor | Product list with cart</title>
+  </head>
+  <body>
+    <div id="overlay" class="overlay hidden"></div>
+    <div class="wrapper">
+      <main class="cart-main">
+        <section id="cart" class="cart-section">
+          <h1 class="cart-heading">Desserts</h1>
+          <div id="cart-categories" class="cart-categories"></div>
+        </section>
+        <section class="cart-section">
+          <h3 class="cart-heading">
+            Your cart <span id="total-products">(0)</span>
+          </h3>
+          <div id="empty-cart" class="empty">
+            <div class="empty-image">
+              <img src="./assets/images/illustration-empty-cart.svg" alt="" />
+            </div>
+            <p class="empty-text">Your added items will be appear here</p>
+          </div>
+          <div id="my-cart" class="my-cart"></div>
+          <div class="cart-total cart-pay">
+            <span class="total-text">Order Total</span>
+            <span id="total-price" class="total-price"></span>
+          </div>
+          <div class="cart-carbon cart-pay">
+            <img src="./assets/images/icon-carbon-neutral.svg" alt="" />
+            <p>This is a <span>carbon-neutral</span> delivery</p>
+          </div>
+          <div id="confirm" class="cart-comfirm cart-pay">
+            <span>Comfirm Order</span>
+          </div>
+        </section>
+        <section id="checkout" class="cart-checkout hidden">
+          <div class="checkout-logo">
+            <img
+              src="./assets/images/icon-order-confirmed.svg"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <h2 class="checkout-heading">Order comfirmed</h2>
+          <p class="checkout-text">We hope you enjoy your food</p>
+          <div class="checkout-action">
+            <div id="checkout-list" class="checkout-listItem"></div>
+            <div id="checkout-total" class="checkout-total"></div>
+          </div>
+          <button id="checkout-confirmed" class="checkout-confirmed">
+            Start new order
+          </button>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
+<script type="module" src="./js/checkout.js"></script>
+<script type="module" src="./js/renderData.js"></script>
+<script type="module" src="./js/renderMycart.js"></script>
+<script type="module" src="./js/emptyCart.js"></script>
+<script type="module" src="./js/action.js"></script>
